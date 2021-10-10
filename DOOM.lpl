@@ -1,0 +1,35 @@
+{
+  "version": "1.5",
+  "default_core_path": "/tmp/cores/prboom_libretro.so",
+  "default_core_name": "Doom (PrBoom)",
+  "label_display_mode": 0,
+  "right_thumbnail_mode": 0,
+  "left_thumbnail_mode": 0,
+  "sort_mode": 0,
+  "items": [
+    {
+      "path": "/storage/roms/dooms/doom/doom.wad",
+      "label": "Doom",
+      "core_path": "/tmp/cores/prboom_libretro.so",
+      "core_name": "Doom (PrBoom)",
+      "crc32": "DETECT",
+      "db_name": "DOOM.lpl"
+    },
+    {
+      "path": "/storage/roms/dooms/doom2/doom2.wad",
+      "label": "Doom II - Hell on Earth",
+      "core_path": "/tmp/cores/prboom_libretro.so",
+      "core_name": "Doom (PrBoom)",
+      "crc32": "DETECT",
+      "db_name": "DOOM.lpl"
+    },
+    {
+      "path": "/storage/roms/dooms/finaldoom/plutonia.wad",
+      "label": "Final Doom - The Plutonia Experiment",
+      "core_path": "/tmp/cores/prboom_libretro.so",
+      "core_name": "Doom (PrBoom)",
+      "crc32": "DETECT",
+      "db_name": "DOOM.lpl"
+    }
+  ]
+}
