@@ -12,8 +12,13 @@ case "$sys_type" in
     ;;
   'atari2600')
     rom_ext="a26"
-    core_path="/tmp/cores/stella_libretro.so"
-    core_name="Atari - 2600 (Stella)"
+    if [ -n "$GPI_CASE" ]; then
+      core_path="/tmp/cores/stella2014_libretro.so"
+      core_name="Atari - 2600 (Stella 2014)"
+    else
+      core_path="/tmp/cores/stella_libretro.so"
+      core_name="Atari - 2600 (Stella)"
+    fi
     db_name="Atari - 2600.lpl"
     ;;
   'atarilynx')
@@ -36,8 +41,13 @@ case "$sys_type" in
     ;;
   'gba')
     rom_ext="gba"
-    core_path="/tmp/cores/mgba_libretro.so"
-    core_name="Nintendo - Game Boy Advance (mGBA)"
+    if [ -n "$GPI_CASE" ]; then
+      core_path="/tmp/cores/gpsp_libretro.so"
+      core_name="Nintendo - Game Boy Advance (gpSP)"
+    else
+      core_path="/tmp/cores/mgba_libretro.so"
+      core_name="Nintendo - Game Boy Advance (mGBA)"
+    fi
     db_name="Nintendo - Game Boy Advance.lpl"
     ;;
   'gbc')
@@ -60,8 +70,13 @@ case "$sys_type" in
     ;;
   'snes')
     rom_ext="sfc"
-    core_path="/tmp/cores/snes9x_libretro.so"
-    core_name="Nintendo - SNES / SFC (Snes9x - Current)"
+    if [ -n "$GPI_CASE" ]; then
+      core_path="/tmp/cores/snes9x2002_libretro.so"
+      core_name="Nintendo - SNES / SFC (Snes9x 2002)"
+    else
+      core_path="/tmp/cores/snes9x_libretro.so"
+      core_name="Nintendo - SNES / SFC (Snes9x - Current)"
+    fi
     db_name="Nintendo - Super Nintendo Entertainment System.lpl"
     ;;
   'ngpc')
@@ -72,20 +87,35 @@ case "$sys_type" in
     ;;
   'gamegear')
     rom_ext="gg"
-    core_path="/tmp/cores/genesis_plus_gx_libretro.so"
-    core_name="Sega - MS/GG/MD/CD (Genesis Plus GX)"
+    if [ -n "$GPI_CASE" ]; then
+      core_path="/tmp/cores/gearsystem_libretro.so"
+      core_name="Sega - MS/GG/SG-1000 (Gearsystem)"
+    else
+      core_path="/tmp/cores/genesis_plus_gx_libretro.so"
+      core_name="Sega - MS/GG/MD/CD (Genesis Plus GX)"
+    fi
     db_name="Sega - Game Gear.lpl"
     ;;
   'mastersystem')
     rom_ext="sms"
-    core_path="/tmp/cores/genesis_plus_gx_libretro.so"
-    core_name="Sega - MS/GG/MD/CD (Genesis Plus GX)"
+    if [ -n "$GPI_CASE" ]; then
+      core_path="/tmp/cores/picodrive_libretro.so"
+      core_name="Sega - MS/MD/CD/32X (PicoDrive)"
+    else
+      core_path="/tmp/cores/genesis_plus_gx_libretro.so"
+      core_name="Sega - MS/GG/MD/CD (Genesis Plus GX)"
+    fi
     db_name="Sega - Master System - Mark III.lpl"
     ;;
   'megadrive')
     rom_ext="md"
-    core_path="/tmp/cores/genesis_plus_gx_libretro.so"
-    core_name="Sega - MS/GG/MD/CD (Genesis Plus GX)"
+    if [ -n "$GPI_CASE" ]; then
+      core_path="/tmp/cores/picodrive_libretro.so"
+      core_name="Sega - MS/MD/CD/32X (PicoDrive)"
+    else
+      core_path="/tmp/cores/genesis_plus_gx_libretro.so"
+      core_name="Sega - MS/GG/MD/CD (Genesis Plus GX)"
+    fi
     db_name="Sega - Mega Drive - Genesis.lpl"
     ;;
   'psx')
