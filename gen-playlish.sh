@@ -88,6 +88,12 @@ case "$sys_type" in
     core_name="Sega - MS/GG/MD/CD (Genesis Plus GX)"
     db_name="Sega - Mega Drive - Genesis.lpl"
     ;;
+  'psx')
+    rom_ext="cue"
+    core_path="/tmp/cores/pcsx_rearmed_libretro.so"
+    core_name="Sony - PlayStation (PCSX ReARMed)"
+    db_name="Sony - PlayStation.lpl"
+    ;;
   *)
     echo "Don't recognize system for roms in $sys_type directory..."
     exit 1
